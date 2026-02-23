@@ -520,9 +520,27 @@ const SlotChar: React.FC<{ char: string; fixedDir?: 'up' | 'left'; delay?: numbe
     const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const spinRef  = useRef<() => void>(() => {});
 
-    useEffect(() => {
-        if (measureRef.current)
-            setDims({ w: measureRef.current.offsetWidth, h: measureRef.current.offsetHeight });
+useEffect(() => {
+        const updateDims = () => {
+            if (measureRef.current) {
+                setDims({ w: measureRef.current.offsetWidth, h: measureRef.current.offsetHeight });
+            }
+        };
+
+        // 1. 初始测量
+        updateDims();
+
+        // 2. 等待所有自定义字体加载完成后，重新测量
+        document.fonts.ready.then(() => {
+            updateDims();
+        });
+
+        // 3. 监听窗口缩放，确保字号随屏幕变化时也能对齐
+        window.addEventListener('resize', updateDims);
+
+        return () => {
+            window.removeEventListener('resize', updateDims);
+        };
     }, [char]);
 
     // 每次渲染刷新，捕获最新 dir / dims
@@ -2825,14 +2843,14 @@ const HomePage: React.FC = () => {
                     </div>
                     <div className="w-full h-px bg-white/25" />
 
-                    {/* Text — centred */}
+                   {/* Text — centred */}
                     <div className="px-6" style={{ paddingTop: RULE_PAD_TOP, paddingBottom: RULE_PAD_BOT }}>
                         <div
-                            className="flex items-center justify-center gap-[4vw] w-full select-none"
+                            className="flex flex-nowrap items-center justify-center gap-[4vw] w-full select-none"
                             style={{ lineHeight: 0.88 }}
                         >
                             <span
-                                className="text-white tracking-tight"
+                                className="text-white tracking-tight whitespace-nowrap"
                                 style={{
                                     fontFamily: '"Bebas Neue", "Inter", "Arial Black", sans-serif',
                                     fontSize: 'clamp(96px, 17vw, 300px)',
@@ -2849,7 +2867,7 @@ const HomePage: React.FC = () => {
                                 ✦
                             </span>
                             <span
-                                className="text-white tracking-tight"
+                                className="text-white tracking-tight whitespace-nowrap"
                                 style={{
                                     fontFamily: '"Bebas Neue", "Inter", "Arial Black", sans-serif',
                                     fontSize: 'clamp(96px, 17vw, 300px)',
