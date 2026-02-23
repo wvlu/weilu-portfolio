@@ -579,7 +579,7 @@ useEffect(() => {
         return () => { if (timerRef.current) clearTimeout(timerRef.current); };
     }, [dims]);
 
-    if (!dims) return <span ref={measureRef} style={{ display: 'inline-block', verticalAlign: 'top' }}>{char}</span>;
+if (!dims) return <span ref={measureRef} style={{ display: 'inline-block', verticalAlign: 'top' }}>{char}</span>;
 
     const TR = anim ? 'transform 700ms cubic-bezier(0.16, 1, 0.3, 1)' : 'none';
     const tx = `translate(${-xOff}px, ${-yOff}px)`;
@@ -588,6 +588,11 @@ useEffect(() => {
 
     return (
         <span style={{ display: 'inline-block', width: dims.w, height: dims.h, overflow: 'hidden', position: 'relative', verticalAlign: 'top' }}>
+            {/* ★ 新增：隐藏的测量基准。保证在字体加载完后，依然有东西可以被测量出真实宽度 */}
+            <span ref={measureRef} style={{ position: 'absolute', visibility: 'hidden', whiteSpace: 'nowrap', top: 0, left: 0 }}>
+                {char}
+            </span>
+
             <span style={{ position: 'absolute', top: 0, left: 0, transform: tx, transition: TR, willChange: 'transform' }}>
                 {char}
             </span>
