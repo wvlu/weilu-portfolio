@@ -34,7 +34,7 @@ const COMMERCIAL_DATA: ProjectItem[] = [
     subtitle: 'ZERO Design System',
     description: '数字孪生的设计规则，涵盖整个数字能源相应业态的场景，L1-L3级分层，转换语义抽象和字意抽象',
     tags: ['Rendering', 'Animation'],
-    image: '/energy/03-Rendering/01ZERO%20Design%20System.png'
+    image: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/03-Rendering/01ZERO%20Design%20System.png'
   },
   {
     id: 'std',
@@ -42,7 +42,7 @@ const COMMERCIAL_DATA: ProjectItem[] = [
     subtitle: 'Huawei Digital Power 3D Resources，2023-2025',
     description: '仅展示我参与制作部分',
     tags: ['System Design', 'Guidelines'],
-    video: '/energy/02-System%20design/2.1首页使用.mp4'
+    video: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.1首页使用.mp4'
   },
   {
     id: 'log',
@@ -50,7 +50,7 @@ const COMMERCIAL_DATA: ProjectItem[] = [
     subtitle: 'JIWU Collection 2025',
     description: '前公司邀请制作2025款银箔大理石茶几产品视频',
     tags: ['Technical Art', 'NPR'],
-    video: '/energy/04/01banner.mp4'
+    video: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/04/01banner.mp4'
   },
   {
     id: 'vis',
@@ -58,7 +58,7 @@ const COMMERCIAL_DATA: ProjectItem[] = [
     subtitle: 'HELIAN 2022',
     description: 'HELIAN型材灯具，创作于2022年',
     tags: ['3D', 'Motion'],
-    video: '/energy/05/01banner.mp4'
+    video: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/05/01banner.mp4'
   }
 ];
 
@@ -615,79 +615,79 @@ const SpotlightGroup: React.FC<{ children: React.ReactNode; className?: string }
 // 数字能源 S1 官网素材（本地文件放 public/energy/ 目录下）
 const ENERGY_S1_DATA: { type: 'video' | 'image'; src: string; name: string }[] = [
     { type: 'video', src: 'https://solar.huawei.com/admin/asset/v1/pro/view/330af497446a4a59bba4c0594148980a.mp4', name: '首页 Banner' },
-    { type: 'image', src: '/energy/2更多电量，更久守护.png',   name: '更多电量，更久守护' },
-    { type: 'image', src: '/energy/3静音运行.jpg',             name: '静音运行' },
-    { type: 'image', src: '/energy/4快充快放，超乎想象.png',   name: '快充快放，超乎想象' },
-    { type: 'image', src: '/energy/5高可靠电芯.png',           name: '高可靠电芯' },
-    { type: 'video', src: '/energy/6主动隔离防护.mp4',         name: '主动隔离防护' },
-    { type: 'image', src: '/energy/7零度不影响工作.jpg',       name: '零度不影响工作' },
-    { type: 'image', src: '/energy/8浸水防护.png',             name: '浸水防护' },
-    { type: 'image', src: '/energy/9高强抗压.png',             name: '高强抗压' },
-    { type: 'image', src: '/energy/10电芯级管理.png',          name: '电芯级管理' },
-    { type: 'image', src: '/energy/11应急消防.png',            name: '应急消防' },
-    { type: 'image', src: '/energy/12主动泄压及时防护.png',    name: '主动泄压及时防护' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/2更多电量，更久守护.png',   name: '更多电量，更久守护' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/3静音运行.jpg',             name: '静音运行' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/4快充快放，超乎想象.png',   name: '快充快放，超乎想象' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/5高可靠电芯.png',           name: '高可靠电芯' },
+    { type: 'video', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/6主动隔离防护.mp4',         name: '主动隔离防护' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/7零度不影响工作.jpg',       name: '零度不影响工作' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/8浸水防护.png',             name: '浸水防护' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/9高强抗压.png',             name: '高强抗压' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/10电芯级管理.png',          name: '电芯级管理' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/11应急消防.png',            name: '应急消防' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/12主动泄压及时防护.png',    name: '主动泄压及时防护' },
 ];
 // 灯箱可导航图片：ENERGY_S1_DATA 的 index，按页面展示顺序排列
 const ENERGY_LIGHTBOX = [3, 10, 9, 8, 11, 2, 6, 1, 4];
 
 const ENERGY_S2_DATA: { type: 'video' | 'image'; src: string; name: string }[] = [
-    { type: 'video', src: '/energy/02-System%20design/2.1首页使用.mp4',            name: '首页 Banner' },
-    { type: 'image', src: '/energy/02-System%20design/2.2液冷超充.jpg',            name: '液冷超充' },
-    { type: 'image', src: '/energy/02-System%20design/2.3极速充电.jpg',            name: '极速充电' },
-    { type: 'image', src: '/energy/02-System%20design/2.4极高质量.jpg',            name: '极高质量' },
-    { type: 'image', src: '/energy/02-System%20design/2.5融合光储.jpg',            name: '融合光储' },
-    { type: 'video', src: '/energy/02-System%20design/2.6充电模块banner.mp4',      name: '充电模块 Banner' },
-    { type: 'image', src: '/energy/02-System%20design/2.7充电模块.jpg',            name: '充电模块' },
-    { type: 'image', src: '/energy/02-System%20design/2.8Smart cooling.jpg',       name: 'Smart Cooling' },
-    { type: 'image', src: '/energy/02-System%20design/2.9Smart cooling2.jpg',      name: 'Smart Cooling 2' },
-    { type: 'image', src: '/energy/02-System%20design/2.10Prefabricated.jpg',      name: 'Prefabricated' },
-    { type: 'image', src: '/energy/02-System%20design/2.11数据中心.jpg',           name: '数据中心' },
-    { type: 'image', src: '/energy/02-System%20design/2.12数据中心2.jpg',          name: '数据中心 2' },
-    { type: 'image', src: '/energy/02-System%20design/2.13智慧新模块.jpg',         name: '智慧新模块' },
-    { type: 'video', src: '/energy/02-System%20design/2.14B+级纯电动解决方案.mp4', name: 'B+级纯电动解决方案' },
-    { type: 'image', src: '/energy/02-System%20design/2.15电机1.jpg',              name: '电机 1' },
-    { type: 'image', src: '/energy/02-System%20design/2.16电机2.jpg',              name: '电机 2' },
-    { type: 'image', src: '/energy/02-System%20design/2.17电机3.jpg',              name: '电机 3' },
-    { type: 'image', src: '/energy/02-System%20design/2.18B级底盘.png',            name: 'B级底盘' },
-    { type: 'image', src: '/energy/02-System%20design/2.19角度1.png',              name: '角度 1' },
-    { type: 'image', src: '/energy/02-System%20design/2.20角度2.jpg',              name: '角度 2' },
-    { type: 'image', src: '/energy/02-System%20design/2.21角度3.jpg',              name: '角度 3' },
+    { type: 'video', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.1首页使用.mp4',            name: '首页 Banner' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.2液冷超充.jpg',            name: '液冷超充' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.3极速充电.jpg',            name: '极速充电' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.4极高质量.jpg',            name: '极高质量' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.5融合光储.jpg',            name: '融合光储' },
+    { type: 'video', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.6充电模块banner.mp4',      name: '充电模块 Banner' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.7充电模块.jpg',            name: '充电模块' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.8Smart cooling.jpg',       name: 'Smart Cooling' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.9Smart cooling2.jpg',      name: 'Smart Cooling 2' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.10Prefabricated.jpg',      name: 'Prefabricated' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.11数据中心.jpg',           name: '数据中心' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.12数据中心2.jpg',          name: '数据中心 2' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.13智慧新模块.jpg',         name: '智慧新模块' },
+    { type: 'video', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.14B+级纯电动解决方案.mp4', name: 'B+级纯电动解决方案' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.15电机1.jpg',              name: '电机 1' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.16电机2.jpg',              name: '电机 2' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.17电机3.jpg',              name: '电机 3' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.18B级底盘.png',            name: 'B级底盘' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.19角度1.png',              name: '角度 1' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.20角度2.jpg',              name: '角度 2' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/02-System%20design/2.21角度3.jpg',              name: '角度 3' },
 ];
 const STD_LIGHTBOX = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20];
 
 const ENERGY_S3_DATA: { type: 'video' | 'image'; src: string; name: string }[] = [
-    { type: 'image', src: '/energy/03-Rendering/01ZERO%20Design%20System.png',    name: 'ZERO Design System 01' },
-    { type: 'image', src: '/energy/03-Rendering/02ZERO%20Design%20System.png',    name: 'ZERO Design System 02' },
-    { type: 'image', src: '/energy/03-Rendering/03ZERO%20Design%20System.png',    name: 'ZERO Design System 03' },
-    { type: 'image', src: '/energy/03-Rendering/04FusionSolar.png',               name: 'FusionSolar' },
-    { type: 'image', src: '/energy/03-Rendering/05智能管理系统.png',               name: '智能管理系统' },
-    { type: 'image', src: '/energy/03-Rendering/06Products%20%20Solutions.jpg',   name: 'Products & Solutions' },
-    { type: 'image', src: '/energy/03-Rendering/07助力城市绿色高质量发展.jpg',    name: '助力城市绿色高质量发展' },
-    { type: 'video', src: '/energy/03-Rendering/08charging5-video.mov',           name: 'Charging Video' },
-    { type: 'video', src: '/energy/03-Rendering/09智能组串式储能系统.mp4',         name: '智能组串式储能系统' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/03-Rendering/01ZERO%20Design%20System.png',    name: 'ZERO Design System 01' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/03-Rendering/02ZERO%20Design%20System.png',    name: 'ZERO Design System 02' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/03-Rendering/03ZERO%20Design%20System.png',    name: 'ZERO Design System 03' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/03-Rendering/04FusionSolar.png',               name: 'FusionSolar' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/03-Rendering/05智能管理系统.png',               name: '智能管理系统' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/03-Rendering/06Products%20%20Solutions.jpg',   name: 'Products & Solutions' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/03-Rendering/07助力城市绿色高质量发展.jpg',    name: '助力城市绿色高质量发展' },
+    { type: 'video', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/03-Rendering/08charging5-video.mov',           name: 'Charging Video' },
+    { type: 'video', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/03-Rendering/09智能组串式储能系统.mp4',         name: '智能组串式储能系统' },
 ];
 const RENDERING_LIGHTBOX = [0, 1, 2, 3, 4, 5, 6];
 
 const ENERGY_S4_DATA: { type: 'video' | 'image'; src: string; name: string }[] = [
-    { type: 'video', src: '/energy/04/01banner.mp4', name: 'Banner' },
-    { type: 'image', src: '/energy/04/02.png',       name: '02' },
-    { type: 'image', src: '/energy/04/03.png',       name: '03' },
-    { type: 'image', src: '/energy/04/04.png',       name: '04' },
-    { type: 'image', src: '/energy/04/05.png',       name: '05' },
-    { type: 'image', src: '/energy/04/06.png',       name: '06' },
+    { type: 'video', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/04/01banner.mp4', name: 'Banner' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/04/02.png',       name: '02' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/04/03.png',       name: '03' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/04/04.png',       name: '04' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/04/05.png',       name: '05' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/04/06.png',       name: '06' },
 ];
 const LOG_LIGHTBOX = [1, 2, 3, 4, 5];
 
 const ENERGY_S5_DATA: { type: 'video' | 'image'; src: string; name: string }[] = [
-    { type: 'video', src: '/energy/05/01banner.mp4', name: 'Banner' },
-    { type: 'image', src: '/energy/05/02.webp',      name: '02' },
-    { type: 'image', src: '/energy/05/03.webp',      name: '03' },
-    { type: 'image', src: '/energy/05/04.webp',      name: '04' },
-    { type: 'image', src: '/energy/05/05.webp',      name: '05' },
-    { type: 'image', src: '/energy/05/06.webp',      name: '06' },
-    { type: 'image', src: '/energy/05/07.webp',      name: '07' },
-    { type: 'image', src: '/energy/05/08.webp',      name: '08' },
-    { type: 'image', src: '/energy/05/09.webp',      name: '09' },
+    { type: 'video', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/05/01banner.mp4', name: 'Banner' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/05/02.webp',      name: '02' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/05/03.webp',      name: '03' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/05/04.webp',      name: '04' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/05/05.webp',      name: '05' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/05/06.webp',      name: '06' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/05/07.webp',      name: '07' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/05/08.webp',      name: '08' },
+    { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/05/09.webp',      name: '09' },
 ];
 const VIS_LIGHTBOX = [1, 2, 3, 4, 5, 6, 7, 8];
 
