@@ -1819,6 +1819,13 @@ const PersonalPage: React.FC = () => {
                 side: THREE.DoubleSide
             });
 
+            // ★ 新增：等待字体加载完成后，重新生成文字贴图并无缝替换，防止 WebGL 渲染出备用字体
+            document.fonts.ready.then(() => {
+                if (material) {
+                    material.uniforms.uTexture.value = createLetterTexture(char);
+                }
+            });
+
             const mesh = new THREE.InstancedMesh(geo, material, count);
             const dummy = new THREE.Object3D();
             for (let i = 0; i < count; i++) {
@@ -1874,6 +1881,14 @@ const PersonalPage: React.FC = () => {
                 transparent: true,
                 side: THREE.DoubleSide,
             });
+
+            // ★ 新增：同样为顶层 Overlay 模型更新字体贴图
+            document.fonts.ready.then(() => {
+                if (mat) {
+                    mat.uniforms.uTexture.value = createLetterTexture(char);
+                }
+            });
+
             const mesh = new THREE.InstancedMesh(geo, mat, 1);
             const dummy = new THREE.Object3D();
             dummy.updateMatrix();
@@ -2509,6 +2524,11 @@ const AboutSphere: React.FC<{ excludeRef?: React.RefObject<HTMLElement> }> = ({ 
         const ro = new ResizeObserver(resize);
         ro.observe(container);
         resize();
+        
+        // ★ 新增：等待字体加载完毕后，强制重新计算一次排斥区的位置和大小
+        document.fonts.ready.then(() => {
+            resize();
+        });
 
         let mouse = { x: -1000, y: -1000 };
         let lastMouse = { x: -1000, y: -1000 };
