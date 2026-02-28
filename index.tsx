@@ -688,8 +688,15 @@ const ENERGY_S3_DATA: { type: 'video' | 'image'; src: string; name: string }[] =
     { type: 'image', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/03-Rendering/07助力城市绿色高质量发展.jpg',    name: '助力城市绿色高质量发展' },
     { type: 'video', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/03-Rendering/08charging5-video.mov',           name: 'Charging Video' },
     { type: 'video', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/03-Rendering/09智能组串式储能系统.mp4',         name: '智能组串式储能系统' },
+    { type: 'image', src: '/energy/03-Rendering/03%20(1).jpg',  name: '03 (1)' },
+    { type: 'image', src: '/energy/03-Rendering/03%20(2).jpg',  name: '03 (2)' },
+    { type: 'image', src: '/energy/03-Rendering/03%20(3).jpg',  name: '03 (3)' },
+    { type: 'image', src: '/energy/03-Rendering/06%20(1).jpg',  name: '06 (1)' },
+    { type: 'image', src: '/energy/03-Rendering/06%20(2).jpg',  name: '06 (2)' },
+    { type: 'image', src: '/energy/03-Rendering/06%20(3).jpg',  name: '06 (3)' },
+    { type: 'image', src: '/energy/03-Rendering/06.1.jpg',      name: '06.1' },
 ];
-const RENDERING_LIGHTBOX = [0, 1, 2, 3, 4, 5, 6];
+const RENDERING_LIGHTBOX = [0, 1, 2, 9, 10, 11, 3, 4, 12, 13, 14, 15, 5, 6];
 
 const ENERGY_S4_DATA: { type: 'video' | 'image'; src: string; name: string }[] = [
     { type: 'video', src: 'https://weilu-design-1405746396.cos.ap-hongkong.myqcloud.com/energy/04/01banner.mp4', name: 'Banner' },
@@ -875,12 +882,12 @@ const CommercialPage: React.FC = () => {
             style={{ background: 'linear-gradient(180deg, #000000 0%, #000000 20%, #0a0a0a 100%)' }}
         >
             <div className="relative">
-                <div className="sticky top-0 z-50 w-full flex justify-center items-center px-8 py-8 bg-black/50 backdrop-blur-md border-b border-white/10">
-                    <h2 className="text-white uppercase"
-                        style={{ fontFamily: '"Bebas Neue", "Inter", "Arial Black", sans-serif', fontSize: 'clamp(72px, 10vw, 160px)', fontWeight: 400, letterSpacing: '0.12em', lineHeight: 1 }}>
-                        WORK
-                    </h2>
-                </div>
+    <div className="relative w-full flex justify-center items-center px-8 py-8 border-b border-white/10">
+        <h2 className="text-white uppercase"
+            style={{ fontFamily: '"Bebas Neue", "Inter", "Arial Black", sans-serif', fontSize: 'clamp(72px, 10vw, 160px)', fontWeight: 400, letterSpacing: '0.12em', lineHeight: 1 }}>
+            WORK
+        </h2>
+    </div>
 
                 <div className="w-full">
                     {COMMERCIAL_DATA.map((item, index) => {
@@ -914,11 +921,6 @@ const CommercialPage: React.FC = () => {
                                 )}
                                 {(!item.video && !item.image) && (
                                     <div className="absolute bottom-8 left-8 text-white/40 font-mono text-sm">{item.tags.join(' / ')}</div>
-                                )}
-                                {(item.video || item.image) && (
-                                    <div className="absolute top-8 left-8 text-white/80 font-mono text-sm z-10 bg-black/40 backdrop-blur-sm px-2 py-1 rounded border border-white/10">
-                                        0{index + 1} &mdash; {item.tags[0]}
-                                    </div>
                                 )}
                              </div>
                              <div
@@ -1244,7 +1246,7 @@ const CommercialPage: React.FC = () => {
                         {/* 2. 文字介绍 */}
                         <div style={{ padding: '52px 48px', textAlign: 'center' }}>
                             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '15px', lineHeight: 1.9, fontWeight: 300, maxWidth: '560px', margin: '0 auto', letterSpacing: '0.02em' }}>
-                                这是一次关于数字能源全业态三维表现的系统化数字孪生实践。该规范涵盖了从工商业光储充运维到数据中心智能管理的全场景。我们通过 L1-L3 的层级化建模策略，实现了场景复杂度与渲染性能的动态平衡。在设计过程中，我重点处理了语义抽象与符号化表现的融合，确保了产品在不同维度下（如 App 能流关系与 Web 运维地图）都能精准传递核心信息及整体的一致化。
+                                这是一次关于数字能源全业态三维表现的系统化数字孪生实践。该规范涵盖了从工商业光储充运维到数据中心智能管理等多端商业场景。我们通过 L1-L3 的层级化建模策略，实现了场景复杂度与商业逻辑的动态平衡。在设计过程中，最大难点在于同类型产品在不同业态下的不同造型，最终以语义抽象与符号化的融合方式，确保了产品在不同维度下（如 App 能流关系与 Web 运维地图）都能精准传递核心信息及整体的一致化。此项目涉及庞大的业务群，交互视觉三维动态多业态合作，我仅负责三维模型，场景，三维动态的部分。
                             </p>
                         </div>
 
@@ -1258,6 +1260,17 @@ const CommercialPage: React.FC = () => {
                             style={{ width: '100%', display: 'block', marginTop: '4px', cursor: 'zoom-in' }}
                             onClick={() => openRenderingLightbox(2)} />
 
+                        {/* 4b. 三列一排：03(1) 03(2) 03(3) */}
+                        <div style={{ display: 'flex', gap: '4px', marginTop: '4px' }}>
+                            {[9, 10, 11].map(di => (
+                                <div key={di} style={{ flex: 1, minWidth: 0, overflow: 'hidden' }}>
+                                    <img src={ENERGY_S3_DATA[di].src} alt={ENERGY_S3_DATA[di].name}
+                                        style={{ width: '100%', display: 'block', cursor: 'zoom-in' }}
+                                        onClick={() => openRenderingLightbox(di)} />
+                                </div>
+                            ))}
+                        </div>
+
                         {/* 5. 两列：FusionSolar / 智能管理系统 */}
                         <div style={{ display: 'flex', gap: '4px', marginTop: '4px', height: '30vw' }}>
                             {[3, 4].map(di => (
@@ -1268,6 +1281,22 @@ const CommercialPage: React.FC = () => {
                                 </div>
                             ))}
                         </div>
+
+                        {/* 5b. 三列一排：06(1) 06(2) 06(3) */}
+                        <div style={{ display: 'flex', gap: '4px', marginTop: '4px' }}>
+                            {[12, 13, 14].map(di => (
+                                <div key={di} style={{ flex: 1, minWidth: 0, overflow: 'hidden' }}>
+                                    <img src={ENERGY_S3_DATA[di].src} alt={ENERGY_S3_DATA[di].name}
+                                        style={{ width: '100%', display: 'block', cursor: 'zoom-in' }}
+                                        onClick={() => openRenderingLightbox(di)} />
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* 5c. 全宽图片：06.1 */}
+                        <img src={ENERGY_S3_DATA[15].src} alt={ENERGY_S3_DATA[15].name}
+                            style={{ width: '100%', display: 'block', marginTop: '4px', cursor: 'zoom-in' }}
+                            onClick={() => openRenderingLightbox(15)} />
 
                         {/* 6. 全宽图片：Products & Solutions */}
                         <img src={ENERGY_S3_DATA[5].src} alt={ENERGY_S3_DATA[5].name}
@@ -2377,45 +2406,67 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Right section: nav links */}
-            <div className="flex items-center gap-10 px-10 h-full border-l border-white/10">
-                {(['ABOUT', 'WORK', 'LABS'] as const).map(label => {
-                    const h = hoverMap[label];
-                    return (
-                        <button
-                            key={label}
-                            onClick={() => scrollToSection(
-                                label === 'WORK' ? 'commercial-section' :
-                                label === 'LABS' ? 'labs-section' : 'about-section'
-                            )}
-                            onMouseEnter={() => handleEnter(label)}
-                            onMouseLeave={() => handleLeave(label)}
-                            className="relative text-white/50 hover:text-white transition-colors duration-200 text-xs tracking-[0.25em] font-medium uppercase"
-                            style={{ paddingLeft: '10px' }}
-                        >
-                            {/* 右指三角形：出现时闪烁3次后彻底显示，离开立即消失 */}
-                            {h.active && (
-                                <span
-                                    key={h.animKey}
-                                    style={{
-                                        position: 'absolute',
-                                        left: 0,
-                                        top: '50%',
-                                        transform: 'translateY(-50%)',
-                                        display: 'block',
-                                        width: 0,
-                                        height: 0,
-                                        borderTop: '3.5px solid transparent',
-                                        borderBottom: '3.5px solid transparent',
-                                        borderLeft: '5px solid white',
-                                        animation: 'navTriBlink 500ms ease-out forwards',
-                                    }}
-                                />
-                            )}
-                            {label}
-                        </button>
-                    );
-                })}
+<div className="flex items-center gap-10 px-10 h-full border-l border-white/10">
+    {(['ABOUT', 'WORK', 'LABS'] as const).map(label => {
+        const h = hoverMap[label];
+        return (
+            <button
+                key={label}
+                onClick={() => scrollToSection(
+                    label === 'WORK' ? 'commercial-section' :
+                    label === 'LABS' ? 'labs-section' : 'about-section'
+                )}
+                onMouseEnter={() => handleEnter(label)}
+                onMouseLeave={() => handleLeave(label)}
+                className="relative text-white/50 hover:text-white transition-colors duration-200 text-xs tracking-[0.25em] font-medium uppercase"
+                style={{ paddingLeft: '10px' }}
+            >
+                {h.active && (
+                    <span
+                        key={h.animKey}
+                        style={{
+                            position: 'absolute',
+                            left: 0,
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            display: 'block',
+                            width: 0,
+                            height: 0,
+                            borderTop: '3.5px solid transparent',
+                            borderBottom: '3.5px solid transparent',
+                            borderLeft: '5px solid white',
+                            animation: 'navTriFadeIn 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        }}
+                    />
+                )}
+                {label}
+            </button>
+        );
+    })}
+
+    {/* 垂直分割线，体现“单独为一格” */}
+    <div className="w-px h-4 bg-white/20 ml-2"></div>
+
+    {/* WECHAT 悬停区域 */}
+    <div className="relative flex items-center h-full group cursor-pointer">
+        <span className="text-white/50 group-hover:text-white transition-colors duration-200 text-xs tracking-[0.25em] font-medium uppercase">
+            WECHAT
+        </span>
+        
+        {/* 悬停时出现的二维码白色卡片 */}
+        <div className="absolute top-full right-0 pt-4 opacity-0 pointer-events-none group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50 w-[200px]">
+            <div className="bg-white p-3.5 rounded-md shadow-[0_15px_40px_rgba(0,0,0,0.6)] relative flex flex-col items-center w-full">
+                {/* 指向顶部的小三角 */}
+                <div className="absolute -top-1.5 right-6 w-4 h-4 bg-white rotate-45 rounded-sm"></div>
+                {/* 请将这里的 src 换成你实际放在 public 目录下的图片名 */}
+                <img src="/二维码_PNG.png" alt="WeChat QR Code" className="w-full h-auto object-contain relative z-10" />
+                <span className="text-black/40 text-[9px] tracking-[0.2em] uppercase mt-2 font-mono relative z-10">
+                    Scan to connect
+                </span>
             </div>
+        </div>
+    </div>
+</div>
         </nav>
     );
 };
